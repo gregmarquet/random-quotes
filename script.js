@@ -16,16 +16,46 @@ $(document).ready(function() {
       success: function(response) {
         console.log(response);
         quote = response.quoteText;
-        author = response.quoteAuthor;
+        author = response.quoteAuthor || 'unknown';
         $('#quote').text(quote);
-        if (author) {
-          console.log(response.quoteAuthor);
-          $('#author').text(` - ${author}`);
-        } else {
-          $('#author').text(' - unknown');
-        }
+        $('#author').text(` - ${author}`);
       }
     });
   }
+
+  function windowPopup(url, width, height) {
+  // Calculate the position of the popup so
+  // it’s centered on the screen.
+    var left = (screen.width / 2) - (width / 2),
+        top = (screen.height / 2) - (height / 2);
+
+    window.open(
+      url,
+      "",
+      "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=" + width + ",height=" + height + ",top=" + top + ",left=" + left
+    );
+  }
+
   getQuote();
+
+  $('#get-quote').click(function(e){
+    e.preventDefault();
+    getQuote();
+  });
+
+  $('#tweet-quote').click(function(e) {
+    e.preventDefault();
+
+    windowPopup('https://twitter.com/intent/tweet?text=' + encodeURIComponent(quote + " - " + author), 500, 300);
+
+  });
+
+
+
+
+
+
+
 });
+
+
