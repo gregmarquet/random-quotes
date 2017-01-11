@@ -56,6 +56,10 @@ table {
   box-sizing: border-box;
 }
 
+/* ================================= 
+               Quote
+==================================== */
+
 .landing-div {
   background: url(images/nathan-anderson-web.jpg) no-repeat center center fixed;
   width: 100%;
@@ -78,13 +82,41 @@ table {
 
 .quote-container {
   text-align: center;
+  font-family: 'Quintessential', cursive;
+  line-height: 1.5em;
   min-height: 10vh;
   padding: 10px;
   width: 70%;
   font-size: 1.5em;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.65);
 }
+
+#author {
+  padding-top: 3px;
+}
+
+/* ================================= 
+              Buttons
+==================================== */
+.button-container {
+  margin-top: 20px
+}
+
+button {
+  height: 50px;
+  width: 110px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.65);
+  font-size: 1.1em;
+  font-family: 'Helvetica', cursive;
+}
+
+/*#tweet-quote {
+  background: url('images/twitter-logo.png') left center no-repeat;
+  padding-left: 15px;
+}*/
 
 
 
