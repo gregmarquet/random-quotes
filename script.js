@@ -14,7 +14,6 @@ $(document).ready(function() {
         format: 'jsonp'
       },
       success: function(response) {
-        console.log(response);
         quote = response.quoteText;
         author = response.quoteAuthor || 'unknown';
         $('#quote').text(quote);
