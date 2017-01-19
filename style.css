@@ -142,12 +142,25 @@ button img {
 }
 
 #tweet-quote:hover .image_on{
-   display:none
+   display:none;
 }
 #tweet-quote:hover .image_off{
-   display:block
+   display:block;
 }
 
+
+@media (max-width: 320px) {
+
+  button:hover {
+    background-color: rgba(255, 255, 255, 0.65);
+  }
+  #tweet-quote:hover .image_on{
+   display:block;
+  }
+  #tweet-quote:hover .image_off{
+     display:none;
+  }
+}
 
 
 
